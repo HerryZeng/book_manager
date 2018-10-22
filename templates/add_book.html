@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+    增加图书
+{% endblock %}
+
+
+{% block content %}
+    <form action="{% url 'add_book' %}" method="get">
+        <label>书名:</label>
+        <input type="text" name="name" placeholder="书名"/>
+         <br>
+        <label>作者:</label>
+        <input type="text" name="author" placeholder="作者"/>
+        <br>
+        <input type="submit" value="提交">
+        <input type="reset" value="重置">
+        {% csrf_token %}
+    </form>
+{% endblock %}

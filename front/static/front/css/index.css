@@ -1,0 +1,12 @@
+/*table,th,td {*/
+    /*border: 1px solid black;*/
+/*}*/
+
+table tbody tr td a{
+    text-decoration: none;
+    color: blue;
+}
+
+table tbody tr td a:hover {
+    color: red;
+}

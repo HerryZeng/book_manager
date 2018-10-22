@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    图书详情
+{% endblock %}
+
+{% block content %}
+    <form action="{% url 'book_detail' book.0 %}" method="post">
+        <label>ID:{{ book.0 }}</label>
+        <label>书名:{{ book.2 }}</label>
+        <label>作者:{{ book.3 }}</label>
+        <input type="hidden" name="id" value="{{ book.0 }}"/>
+        <br>
+        <input type="submit" value="删除本书">
+    {% csrf_token %}
+    </form>
+{% endblock %}
